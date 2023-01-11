@@ -1,8 +1,9 @@
-# mazeRL-CORE
+# mazeCommRL-CORE
 A communication-efficient reinforcement learning algorithm for solving maze exploration problems by a coordinated group of swarm robots in CORE simulation environment.
 
 ## Quick Start Guide
-**In coutesy with Dr Wenzhan Song Micromouse !(Repository)[https://github.com/wsonguga/Micromouse.git]**
+**In coutesy with Dr Wenzhan Song Micromouse [Repository](https://github.com/wsonguga/Micromouse.git)**
+
 Run in CORE   - Quick Guide
 First make sure that CORE has been installed. If you have not installed CORE, follow CORE Tutorial to install.
 Also, Install python3-tk:
@@ -31,7 +32,7 @@ Open CORE to demonstrate:
 Then open maze.xml, click the Start button.
 
 ## Module Description
-    Micromouse
+    MazeCommRL
     ├── backservice.sh          //starting program in MyService
     ├── __init__.py             //module automatically read by CORE when core-gui opens
     ├── preload.py              //MyService class as an extra service that can be added into CORE, pointered by __init__.py
@@ -51,16 +52,16 @@ Then open maze.xml, click the Start button.
 It is based on 6.2 of CORE tutorial (https://docs.google.com/document/d/1LPkPc2lbStwFtiukYfCxhcW7KewD028XzNfMd20uFFA/edit#heading=h.2clxcd487uk4) as written in framework/demo_core.py. When we open a CORE GUI, it looks for the __init__.py in current fold whose path we have put in /etc/core/core.conf. __init__py then loads preload.py. Then preload.py then loads backservice.sh. And then backservice.sh runs demo_core.py
 
 ### Change Maze for simulation
-In  (https://github.com/herolab-uga/MazeCommR/framework/mazes) you will see number of mazes to simulate, use the following steps to change maze for simulation:
-1. In (https://github.com/herolab-uga/MazeCommR/maze.xml) line 93
+In  (https://github.com/herolab-uga/MazeCommRL/framework/mazes) you will see number of mazes to simulate, use the following steps to change maze for simulation:
+1. In (https://github.com/herolab-uga/MazeCommRL/maze.xml) line 93
  <parameter name="canvas c1">{name {Canvas1}} {wallpaper-style {scaled}} {wallpaper {~/mazeCommRL/mazes/<maze_image>}} {size {1158 772}}</parameter>
 replace <maze_image> with one of the maze file name you find in mazes folder. For example, 2012japan-ef.png.
-2. In (https://github.com/herolab-uga/MazeCommR/framework/demo_core.py)  line 12:
+2. In (https://github.com/herolab-uga/MazeCommRL/framework/demo_core.py)  line 12:
 mazeMap.readFromFile('~/MazeCommRL/mazes/<maze_text_file>')
 replace <maze_text_file> with the corresponding maze text file associated with your rpelace maze image. For example, 2012japan-ef.txt
 
 ### Change Maze Coverage Strategy
-We have implemented DFS and RL based strategies, you can test both of the by changing strategy call in In  (https://github.com/herolab-uga/MazeCommR/framework/demo_core.py) line 18:
+We have implemented DFS and RL based strategies, you can test both of the by changing strategy call in In  (https://github.com/herolab-uga/MazeCommRL/framework/demo_core.py) line 18:
 > micromouse.addTask(StrategyCommMazeRL(micromouse))
 
 ### node send message to host for moving itself
