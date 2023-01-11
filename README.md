@@ -55,9 +55,12 @@ It is based on 6.2 of CORE tutorial (https://docs.google.com/document/d/1LPkPc2l
 In  (https://github.com/herolab-uga/MazeCommRL/tree/main/mazes) you will see number of mazes to simulate, use the following steps to change maze for simulation:
 1. In (https://github.com/herolab-uga/MazeCommRL/tree/main/maze.xml) line 93
 > <parameter name="canvas c1">{name {Canvas1}} {wallpaper-style {scaled}} {wallpaper {~/mazeCommRL/tree/main/mazes/<maze_image>}} {size {1158 772}}</parameter>
+    
 replace <maze_image> with one of the maze file name you find in mazes folder. For example, 2012japan-ef.png.
+    
 2. In (https://github.com/herolab-uga/MazeCommRL/tree/main/framework/demo_core.py)  line 12:
 > mazeMap.readFromFile('~/MazeCommRL/tree/main/mazes/<maze_text_file>')
+    
 replace <maze_text_file> with the corresponding maze text file associated with your rpelace maze image. For example, 2012japan-ef.txt
 
 ### Change Maze Coverage Strategy
@@ -69,5 +72,6 @@ In  (https://github.com/herolab-uga/MazeCommRL/tree/main/framework/demo_core.py)
 > micromouse.setMotorController(COREController(index, initPoint[index], controlNet='10.0.0.254'))
 
 In framework/controller_core.py (https://github.com/herolab-uga/MazeCommRL/tree/main/framework/controller_core.py)
+    
 In goStraight() function:
 > os.system("coresendmsg -a " + self.controlNet + " node number=" + self.index + " xpos=" + str(self.xpos) + " ypos=" + str(self.ypos))
