@@ -9,11 +9,11 @@ First make sure that CORE has been installed. If you have not installed CORE, fo
 Also, Install python3-tk:
 
     $ sudo apt-get install python3-tk
-Download the Micromouse framework from Micrmouse Github Page. 
+Download the MazeCommRL framework from MazeCommRL Github Page. 
 
     $ cd ~
-    $ git clone https://github.com/wsonguga/Micromouse.git
-    $ cd Micromouse
+    $ git clone https://github.com/herolab-uga/MazeCommRL.git
+    $ cd MazeCommRL
  
 Configure the CORE environment for running core_demo.py
 
