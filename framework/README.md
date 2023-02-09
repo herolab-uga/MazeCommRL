@@ -10,9 +10,7 @@
     ├── mouse.py                //The Micromouse class for managing all the modules
     ├── network.py              //Network Interface for communications between Micromice
     ├── strategy.py             //Strategy class
+    ├── strategy_CommMazeRL.py  //Example of RL based Communication efficient Maze Coverage Strategy implemented by the framework
     ├── strategy_multidfs.py    //Example of multi-DFS Strategy implemented by the framework
     └── README.md
 
-
-## Architecture Description
-Refer to [Architecture Description](https://docs.google.com/document/d/1im-nFw-iO0sKvpq5XH-agR5obBuFwbSLMbefUWsbebQ/edit#).
